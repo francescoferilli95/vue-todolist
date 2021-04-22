@@ -8,6 +8,10 @@
     font-size: 16px;
 }
 
+body {
+    background: #b77908;
+}
+
 /* UTILITIES */
 
 .btn {
@@ -33,6 +37,7 @@
 /* LAYOUT */
 
 #app {
+    position: relative;
     max-width: 650px;
     margin: 100px auto;
     padding: 50px 50px;
@@ -40,7 +45,9 @@
     overflow-y: auto;
     text-align: center;
     border-radius: 20px;
-    background: #7b7b7b;
+    color: #fff;
+    background: #871212;
+    z-index: 1;
 }
 
 /* HEADER */
@@ -64,6 +71,7 @@
     margin-right: 60px;
     padding: 0 20px;
     border-radius: 20px;
+    color: #000;
     background: #eee;
     transition: background .3s;
 }
@@ -114,6 +122,8 @@
     padding-right: 10px;
     cursor: pointer;
 }
+
+
 
 /* COMPLETED */
 
@@ -173,4 +183,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* SVG SHAPE */
+
+.wave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }

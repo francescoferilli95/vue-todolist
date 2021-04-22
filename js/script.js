@@ -35,6 +35,7 @@ const app = new Vue({
             text: '',
             index: null,
         },
+        deletedTodos: [],
     },
     methods: {
         /**
@@ -56,7 +57,19 @@ const app = new Vue({
          * REMOVE THE SPECIFIED TODO FROM THE LIST USING HIS INDEX
          */
         removeTodo(index) {
+
+            this.deletedTodos.push(this.todos[index]);
+
             this.todos.splice(index, 1);
+
+        },
+        /**
+         *  RECOVER THE SPECIFIED DELETED TODO AND PUT IT BACK INTO THE LIST
+         */
+        recoverTodo(index) {
+            this.todos.push(this.deletedTodos[index]);
+
+            this.deletedTodos.splice(index, 1);
         },
         /**
          *  UPDATE COMPLETED STATUS 
