@@ -18,16 +18,23 @@
 <body>
     
     <div id="app">
-
+        <!-- HEADER APP -->
         <header class="header-app">
             <h1 class="title">My ToDo List</h1>
         </header>
-
+        <!-- ADD TODO -->
         <section class="add-todo">
-            <input class="input-todo" type="text">
-            <button class="btn add">add todo</button>
+            <input 
+                class="input-todo" 
+                type="text"
+                placeholder="Write new ToDo here"
+                v-model.trim="newTodo"
+                @keyup.enter="addTodo"
+                ref="todoInput"
+            >
+            <button @click="addTodo" class="btn add">add todo</button>
         </section>
-
+        <!-- TODO LIST -->
         <section class="todo-list">
             <ul>
                 <li v-for="todo in todos" class="todo">

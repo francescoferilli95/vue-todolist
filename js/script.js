@@ -25,12 +25,27 @@ const app = new Vue({
                 completed: false,
             },
             {
-                text: 'Going out having a walk',
+                text: 'Going out for a walk',
                 completed: false,
             },
         ],
+        newTodo: '',
     },
     methods: {
+        /**
+         * ADD NEW TODO TO THE LIST AND RESET THE INPUT AND GIVE FOCUS TO THE INPUT
+         */
+        addTodo() {
 
+            if(this.newTodo !== '') {
+                this.todos.push({
+                    text: this.newTodo,
+                    completed: false,
+                });
+            }
+
+            this.newTodo = '';
+            this.$todoInput.focus();
+        },
     },
 });
