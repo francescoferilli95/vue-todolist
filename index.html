@@ -30,8 +30,11 @@
 
         <section class="todo-list">
             <ul>
-                <li class="todo">test</li>
-                <li class="todo">test</li>
+                <li v-for="todo in todos" class="todo">
+                    <span :class="{completed: todo.completed}">{{todo.text}}</span>
+                    <i class=" fas fa-times"></i>
+                </li>
+
             </ul>
         </section>
     </div>
