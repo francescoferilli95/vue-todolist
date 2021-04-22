@@ -67,6 +67,7 @@ const app = new Vue({
          *  RECOVER THE SPECIFIED DELETED TODO AND PUT IT BACK INTO THE LIST
          */
         recoverTodo(index) {
+
             this.todos.push(this.deletedTodos[index]);
 
             this.deletedTodos.splice(index, 1);
@@ -89,6 +90,7 @@ const app = new Vue({
          * UPDATE THE TEXT OF THE TODO
          */
         updateTodo() {
+            
             this.todos[this.editTodo.index].text = this.editTodo.text;
 
             this.closeEdit();
