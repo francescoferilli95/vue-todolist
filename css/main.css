@@ -5,6 +5,93 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Calistoga', cursive;
+    font-size: 16px;
+}
+
+/* UTILITIES */
+
+.btn {
+    padding: 0 30px;
+    border-radius: 25px;
+    background: #fefefe;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* LAYOUT */
+
+#app {
+    max-width: 650px;
+    margin: 100px auto;
+    padding: 50px 50px;
+    max-height: 800px;
+    text-align: center;
+    border-radius: 20px;
+    background: #7b7b7b;
+}
+
+/* HEADER */
+
+.header-app {
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 50px;
+}
+
+/* ADD TODO */
+
+.add-todo {
+    display: flex;
+}
+
+.input-todo {
+    flex-grow: 1;
+    margin-right: 60px;
+    padding: 0 20px;
+    background: #eee;
+    transition: background .3s;
+}
+
+.add-todo .input-todo,
+.add-todo .btn {
+    height: 35px;
+    border: 0;
+    outline: none;
+    box-shadow: 0 15px 10px -15px rgba(0,0,0, .75);
+}
+
+.add-todo .input-todo:hover,
+.add-todo .input-todo:focus {
+    background: #fff;
+}
+
+.add-todo .btn.add {
+    background: #00e165;
+    transition: background .3s;
+}
+
+.add-todo .btn.add:hover,
+.add-todo .btn.add:focus {
+    background: #006b30;
+}
+
+/* TODO LIST */
+
+.todo-list {
+    margin: 50px 0;
+    padding: 15px 30px;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #000;
+}
+
+.todo:last-child {
+    border-bottom: none;
+}
