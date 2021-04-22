@@ -53,7 +53,7 @@
         <section v-show="editTodo.visibility" class="edit-modal">
             <div class="content">
                 <h3 class="modal-title">Update ToDo Text</h3>
-                <input type="text" v-model="editTodo.text" class="modal-text">
+                <input @keyup.enter="updateTodo" type="text" v-model="editTodo.text" class="modal-text">
                 <div class="modal-btns">
                     <button @click="updateTodo" class="btn blue">Update</button>
                     <button @click="closeEdit" class="btn red">Close</button>
