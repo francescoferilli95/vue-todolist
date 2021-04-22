@@ -118,12 +118,19 @@ body {
     border-bottom: none;
 }
 
+.todo-list span {
+    cursor: pointer;
+}
+
 .todo-list i {
     padding-right: 10px;
     cursor: pointer;
 }
 
-
+.deleted-todos i {
+    padding-right: 10px;
+    cursor: pointer;
+}
 
 /* COMPLETED */
 
@@ -149,6 +156,10 @@ body {
     width: 500px;
     padding: 50px;
     background: #fefefe;
+}
+
+.modal-title {
+    color: #000;
 }
 
 .modal-text {
