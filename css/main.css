@@ -16,6 +16,18 @@
     background: #fefefe;
     text-transform: uppercase;
     cursor: pointer;
+    height: 35px;
+    border: 0;
+    outline: none;
+    box-shadow: 0 15px 10px -15px rgba(0,0,0, .75);
+}
+
+.blue {
+    background: dodgerblue;
+}
+
+.red {
+    background: #ff0000;
 }
 
 /* LAYOUT */
@@ -51,6 +63,7 @@
     flex-grow: 1;
     margin-right: 60px;
     padding: 0 20px;
+    border-radius: 20px;
     background: #eee;
     transition: background .3s;
 }
@@ -106,4 +119,58 @@
 
 .todo .text.completed{
     text-decoration: line-through;
+}
+
+/* EDIT MODAL */
+
+.edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0, .8);
+}
+
+.edit-modal .content {
+    width: 500px;
+    padding: 50px;
+    background: #fefefe;
+}
+
+.modal-text {
+    margin: 20px 0;
+    padding-left: 10px;
+    height:35px;
+    width: 395px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: #eee;
+    transition: background .3s;
+}
+
+.modal-text:hover {
+    background: #ddd;
+}
+
+.modal-btns .btn.blue:hover {
+    background: #0000ff;
+}
+
+.modal-btns .btn.red:hover {
+    background: #6d0000;
+}
+
+.modal-title {
+    font-size: 25px;
+}
+
+.modal-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

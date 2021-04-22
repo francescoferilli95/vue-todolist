@@ -30,6 +30,11 @@ const app = new Vue({
             },
         ],
         newTodo: '',
+        editTodo: {
+            visibility: false,
+            text: '',
+            index: null,
+        },
     },
     methods: {
         /**
@@ -59,5 +64,29 @@ const app = new Vue({
         updateStatus(index) {
             this.todos[index].completed = ! this.todos[index].completed;
         },
+        /**
+         * SHOW MODAL TO UPDATE THE TODO TEXT
+         */
+        showEdit(index) {
+            this.editTodo.text = this.todos[index].text;
+            this.editTodo.index = index;
+            this.editTodo.visibility = true;
+        },
+        /**
+         * UPDATE THE TEXT OF THE TODO
+         */
+        updateTodo() {
+            this.todos[this.editTodo.index].text = this.editTodo.text;
+
+            this.closeEdit();
+        },
+        /**
+         * CLOSE THE MODAL
+         */
+        closeEdit() {
+            this.editTodo.visibility = false;
+            this.editTodo.text = '';
+            this.editTodo.index = null;
+        }
     },
 });
