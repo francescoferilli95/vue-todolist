@@ -52,6 +52,12 @@ const app = new Vue({
          */
         removeTodo(index) {
             this.todos.splice(index, 1);
-        }
+        },
+        /**
+         *  UPDATE COMPLETED STATUS 
+         */
+        updateStatus(index) {
+            this.todos[index].completed = ! this.todos[index].completed;
+        },
     },
 });

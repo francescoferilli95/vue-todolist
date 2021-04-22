@@ -38,8 +38,11 @@
         <section class="todo-list">
             <ul v-if="todos.length > 0">
                 <li v-for="(todo, index) in todos" class="todo">
-                    <span :class="{completed: todo.completed}">{{todo.text}}</span>
-                    <i @click="removeTodo(index)" class=" fas fa-times"></i>
+                    <span class="text" :class="{completed: todo.completed}" @click="updateStatus(index)">{{todo.text}}</span>
+                    <div>
+                        <i @click="showEdit(index)" class="fas fa-pen"></i>
+                        <i @click="removeTodo(index)" class=" fas fa-times"></i>
+                    </div>
                 </li>
 
             </ul>

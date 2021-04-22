@@ -101,3 +101,9 @@
     padding-right: 10px;
     cursor: pointer;
 }
+
+/* COMPLETED */
+
+.todo .text.completed{
+    text-decoration: line-through;
+}
