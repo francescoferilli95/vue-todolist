@@ -63,12 +63,13 @@
 
         <section class="deleted-todos">
             <h3>Deleted Todos</h3>
-            <ul>
+            <ul v-if="deletedTodos.length > 0">
                 <li v-for="(todo,index) in deletedTodos" class="todo">
                     <span class="text" :class="{completed: todo.completed}">{{todo.text}}</span>
                     <i @click="recoverTodo(index)" class="fas fa-arrow-up"></i>
                 </li>
             </ul>
+            <h3 v-else>There are no Deleted ToDo</h3>
         </section>
     </div>
 
