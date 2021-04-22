@@ -47,5 +47,11 @@ const app = new Vue({
             this.newTodo = '';
             this.$todoInput.focus();
         },
+        /**
+         * REMOVE THE SPECIFIED TODO FROM THE LIST USING HIS INDEX
+         */
+        removeTodo(index) {
+            this.todos.splice(index, 1);
+        }
     },
 });

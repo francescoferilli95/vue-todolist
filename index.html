@@ -36,13 +36,14 @@
         </section>
         <!-- TODO LIST -->
         <section class="todo-list">
-            <ul>
-                <li v-for="todo in todos" class="todo">
+            <ul v-if="todos.length > 0">
+                <li v-for="(todo, index) in todos" class="todo">
                     <span :class="{completed: todo.completed}">{{todo.text}}</span>
-                    <i class=" fas fa-times"></i>
+                    <i @click="removeTodo(index)" class=" fas fa-times"></i>
                 </li>
 
             </ul>
+            <h2 v-else>No more ToDo are left in the list</h2>
         </section>
     </div>
 
